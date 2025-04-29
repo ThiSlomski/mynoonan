@@ -244,8 +244,9 @@
             <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
                 <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Participe do MyNoonan</h2>
                 
-                <form id="signupForm" action="https://formsubmit.co/slomskisolutions@gmail.com" method="POST" target="hidden_iframe" class="space-y-6">
+                <form action="https://formsubmit.co/slomskisolutions@gmail.com" method="POST" class="space-y-6">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://mynoonan.com/sucesso.html">
                     <input type="hidden" name="_subject" value="Novo cadastro no MyNoonan!">
 
                     <div>
@@ -258,19 +259,11 @@
                         <input type="email" id="email" name="email" required
                                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200">
                     </div>
-                    <button id="submitBtn" type="submit"
+                    <button type="submit"
                             class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-lg">
                         Quero receber novidades <i class="fas fa-envelope ml-2"></i>
                     </button>
                 </form>
-
-                <!-- Iframe invisível -->
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="formSuccess()"></iframe>
-
-                <!-- Mensagem de sucesso -->
-                <p id="formMessage" class="text-sm text-green-600 mt-4 hidden text-center">
-                    Obrigado! Em breve você receberá novidades por e-mail.
-                </p>
 
                 <p class="text-xs text-gray-500 text-center mt-4">
                     Ao se inscrever, você concorda com nossos Termos de Uso e Política de Privacidade.
@@ -328,28 +321,6 @@
             this.reset();
         });
 
-        function formSuccess() {
-            const button = document.getElementById("submitBtn");
-            const message = document.getElementById("formMessage");
-            const form = document.getElementById("signupForm");
-
-            if (form) {
-                form.reset();
-            }
-            if (button) {
-                button.disabled = false;
-                button.innerHTML = 'Quero receber novidades <i class="fas fa-envelope ml-2"></i>';
-            }
-            if (message) {
-                message.classList.remove("hidden");
-            }
-        }
-
-        document.getElementById("signupForm").addEventListener("submit", function () {
-            const button = document.getElementById("submitBtn");
-            button.disabled = true;
-            button.innerHTML = "Enviando...";
-        });
     </script>
 
 </body>
