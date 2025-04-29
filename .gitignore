@@ -1,0 +1,9 @@
+# Ignorar arquivos e pastas do Visual Studio e VS Code
+.vs/
+.vscode/
+*.log
+*.tmp
+node_modules/
+dist/
+build/
+.env

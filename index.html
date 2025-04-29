@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyNoonan - Celebrando Pequenos Gigantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .heart-beat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-heart text-pink-500 text-2xl heart-beat"></i>
+                <span class="text-xl font-bold text-blue-800">MyNoonan</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-blue-600 hover:text-blue-800 font-medium">O que é</a>
+                <a href="#how" class="text-gray-600 hover:text-blue-800 font-medium">Como funciona</a>
+                <a href="#who" class="text-gray-600 hover:text-blue-800 font-medium">Quem somos</a>
+                <a href="#join" class="text-gray-600 hover:text-blue-800 font-medium">Participe</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-blue-900 mb-6">
+                Cada vitória importa.<br>
+                <span class="text-blue-600">Cada história inspira.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-10">
+                "MyNoonan é o espaço para registrar, celebrar e compartilhar as conquistas dos nossos pequenos gigantes com Síndrome de Noonan. Vamos construir juntos um mural de vitórias e esperança."
+            </p>
+            <button onclick="scrollToForm()" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform transition hover:scale-105">
+                Quero fazer parte desse movimento! <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">Por que criamos o MyNoonan?</h2>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    Crianças com Síndrome de Noonan enfrentam batalhas diárias — mas suas vitórias raramente são contadas. O MyNoonan nasceu para mudar isso: aqui, cada pequena conquista é celebrada como uma grande vitória. Queremos dar voz às famílias, construir uma rede de apoio e espalhar esperança para o mundo.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-8 rounded-xl text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-child text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Celebrando Conquistas</h3>
+                    <p class="text-gray-700">Do primeiro sorriso aos grandes marcos, cada vitória merece ser registrada e comemorada.</p>
+                </div>
+                <div class="bg-pink-50 p-8 rounded-xl text-center">
+                    <div class="bg-pink-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hands-helping text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-900 mb-3">Rede de Apoio</h3>
+                    <p class="text-gray-700">Conectamos famílias para compartilhar experiências, dicas e muito apoio emocional.</p>
+                </div>
+                <div class="bg-purple-50 p-8 rounded-xl text-center">
+                    <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-book-medical text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-900 mb-3">Informação de Qualidade</h3>
+                    <p class="text-gray-700">Compartilhamos conhecimento médico e experiências reais para ajudar no dia a dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-16">Como funciona?</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">1</div>
+                        <h3 class="text-xl font-bold text-blue-900">Registre seu filho</h3>
+                    </div>
+                    <p class="text-gray-700">Crie um perfil seguro e cheio de amor para seu pequeno guerreiro, com fotos e informações que você deseja compartilhar.</p>
+                    <div class="mt-6 text-blue-600">
+                        <i class="fas fa-lock mr-2"></i> Totalmente seguro e privado
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-pink-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">2</div>
+                        <h3 class="text-xl font-bold text-blue-900">Conte suas vitórias</h3>
+                    </div>
+                    <p class="text-gray-700">Compartilhe cada marco, cada superação, cada passo conquistado. Do primeiro sorriso às grandes conquistas.</p>
+                    <div class="mt-6 text-pink-600">
+                        <i class="fas fa-trophy mr-2"></i> Cada vitória é celebrada
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">3</div>
+                        <h3 class="text-xl font-bold text-blue-900">Inspire outras famílias</h3>
+                    </div>
+                    <p class="text-gray-700">Sua história pode ser a luz que alguém precisa em um momento difícil. Juntos, criamos uma corrente de esperança.</p>
+                    <div class="mt-6 text-purple-600">
+                        <i class="fas fa-heart mr-2"></i> Apoio e inspiração
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section id="who" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Criança sorrindo" 
+                         class="rounded-xl shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">Quem somos?</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Somos pais, amigos e lutadores. O MyNoonan nasceu da história real de um pequeno grande guerreiro — Ravi Arede Pimenta Slomski — que enfrentou desafios gigantes com coragem e luz.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Hoje queremos acolher milhares de famílias, mostrar que cada batalha vencida é motivo de orgulho, e construir um mural de esperança que inspire o mundo inteiro.
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                        <div class="flex items-start">
+                            <i class="fas fa-quote-left text-blue-400 text-2xl mr-4 mt-1"></i>
+                            <p class="text-blue-900 italic">
+                                "Quando compartilhamos nossas histórias, percebemos que não estamos sozinhos. Cada vitória de um de nossos pequenos gigantes é uma vitória de todos nós."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-16">O que as famílias dizem</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Quando meu filho deu seus primeiros passos aos 3 anos, pensei que ninguém entenderia o quanto isso significou. No MyNoonan, encontrei uma comunidade que celebra cada conquista como se fosse deles."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Ana" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">Ana, mãe do Lucas</h4>
+                            <p class="text-sm text-gray-600">São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "As dicas que recebi de outras mães aqui foram mais úteis do que qualquer consulta médica. Saber que outras crianças passaram pelos mesmos desafios nos deu esperança."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Carla" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">Carla, mãe da Sofia</h4>
+                            <p class="text-sm text-gray-600">Belo Horizonte, MG</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex mb-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Ver o mural de conquistas das outras crianças me mostrou que meu filho pode muito mais do que os médicos previram. Essa comunidade mudou nossa perspectiva."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ricardo" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">Ricardo, pai do Pedro</h4>
+                            <p class="text-sm text-gray-600">Porto Alegre, RS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="join" class="py-20 bg-gradient-to-r from-blue-500 to-blue-700">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-600 p-10 text-white flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-6">Queremos celebrar cada conquista com você!</h2>
+                        <p class="mb-6">
+                            Junte-se a nossa comunidade de famílias que celebram cada vitória dos pequenos gigantes com Síndrome de Noonan.
+                        </p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-check-circle mr-3 text-blue-200"></i>
+                            <span>Receba histórias inspiradoras</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-check-circle mr-3 text-blue-200"></i>
+                            <span>Acesso a dicas e recursos exclusivos</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3 text-blue-200"></i>
+                            <span>Participe de nossa comunidade de apoio</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-10">
+                        <form id="signupForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition duration-200">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition duration-200">
+                            </div>
+                            <div class="pt-2">
+                                <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transform transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50">
+                                    Quero receber novidades <i class="fas fa-envelope ml-2"></i>
+                                </button>
+                            </div>
+                            <p class="text-xs text-gray-500">
+                                Prometemos não compartilhar suas informações. Ao se inscrever, você concorda com nossos Termos de Uso e Política de Privacidade.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-heart text-pink-500 text-2xl"></i>
+                        <span class="text-xl font-bold">MyNoonan</span>
+                    </div>
+                    <p class="mt-4 text-gray-400 max-w-md">
+                        Feito com amor para todos os Pequenos Gigantes. MyNoonan © 2024. Todos os direitos reservados.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>Este site não oferece aconselhamento médico. Consulte sempre um profissional de saúde qualificado.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToForm() {
+            document.getElementById('join').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Here you would typically send this data to your server
+            console.log('Form submitted:', { name, email });
+            
+            // Show success message
+            alert(`Obrigado, ${name}! Em breve você receberá nossas novidades no e-mail ${email}.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
