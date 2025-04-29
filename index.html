@@ -265,7 +265,7 @@
                 </form>
 
                 <!-- Iframe invisível -->
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="formSuccess()"></iframe>
 
                 <!-- Mensagem de sucesso -->
                 <p id="formMessage" class="text-sm text-green-600 mt-4 hidden text-center">
@@ -328,11 +328,27 @@
             this.reset();
         });
 
+        function formSuccess() {
+            const button = document.getElementById("submitBtn");
+            const message = document.getElementById("formMessage");
+            const form = document.getElementById("signupForm");
+
+            if (form) {
+                form.reset();
+            }
+            if (button) {
+                button.disabled = false;
+                button.innerHTML = 'Quero receber novidades <i class="fas fa-envelope ml-2"></i>';
+            }
+            if (message) {
+                message.classList.remove("hidden");
+            }
+        }
+
         document.getElementById("signupForm").addEventListener("submit", function () {
-            setTimeout(function () {
-                document.getElementById("signupForm").reset();
-                document.getElementById("formMessage").classList.remove("hidden");
-            }, 1000); // Dá um tempo para o formSubmit processar
+            const button = document.getElementById("submitBtn");
+            button.disabled = true;
+            button.innerHTML = "Enviando...";
         });
     </script>
 
