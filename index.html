@@ -241,49 +241,26 @@
     <!-- Form Section -->
     <section id="join" class="py-20 bg-gradient-to-r from-blue-500 to-blue-700">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 bg-blue-600 p-10 text-white flex flex-col justify-center">
-                        <h2 class="text-3xl font-bold mb-6">Queremos celebrar cada conquista com você!</h2>
-                        <p class="mb-6">
-                            Junte-se a nossa comunidade de famílias que celebram cada vitória dos pequenos gigantes com Síndrome de Noonan.
-                        </p>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-check-circle mr-3 text-blue-200"></i>
-                            <span>Receba histórias inspiradoras</span>
-                        </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-check-circle mr-3 text-blue-200"></i>
-                            <span>Acesso a dicas e recursos exclusivos</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle mr-3 text-blue-200"></i>
-                            <span>Participe de nossa comunidade de apoio</span>
-                        </div>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Participe do MyNoonan</h2>
+                <form action="https://formsubmit.co/slomskisolutions@gmail.com" method="POST" class="space-y-6">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Novo cadastro no MyNoonan!">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200">
                     </div>
-                    <div class="md:w-1/2 p-10">
-                        <form id="signupForm" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-                                <input type="text" id="name" name="name" required 
-                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition duration-200">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                                <input type="email" id="email" name="email" required 
-                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition duration-200">
-                            </div>
-                            <div class="pt-2">
-                                <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transform transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50">
-                                    Quero receber novidades <i class="fas fa-envelope ml-2"></i>
-                                </button>
-                            </div>
-                            <p class="text-xs text-gray-500">
-                                Prometemos não compartilhar suas informações. Ao se inscrever, você concorda com nossos Termos de Uso e Política de Privacidade.
-                            </p>
-                        </form>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-200">
                     </div>
-                </div>
+                    <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-lg">
+                        Quero receber novidades <i class="fas fa-envelope ml-2"></i>
+                    </button>
+                </form>
+                <p class="text-xs text-gray-500 text-center mt-4">
+                    Ao se inscrever, você concorda com nossos Termos de Uso e Política de Privacidade.
+                </p>
             </div>
         </div>
     </section>
@@ -301,18 +278,9 @@
                         Feito com amor para todos os Pequenos Gigantes. MyNoonan © 2025. Todos os direitos reservados.
                     </p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
+                <div class="flex space-x-6 justify-center mt-4">
+                    <a href="https://instagram.com/mynoonan.app" target="_blank" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-youtube text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-whatsapp text-xl"></i>
                     </a>
                 </div>
             </div>
@@ -321,30 +289,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function scrollToForm() {
-            document.getElementById('join').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            
-            // Here you would typically send this data to your server
-            console.log('Form submitted:', { name, email });
-            
-            // Show success message
-            alert(`Obrigado, ${name}! Em breve você receberá nossas novidades no e-mail ${email}.`);
-            
-            // Reset form
-            this.reset();
-        });
-    </script>
 </body>
 </html>
